@@ -18,8 +18,6 @@ resource "azurerm_resource_group" "webapp-rg" {
   tags     = var.tags
 }
 
-
-# calling web app module to create web app
 module "webapp" {
   source              = "./modules/webapp"
   webapp_name         = var.webapp_name
@@ -30,6 +28,10 @@ module "webapp" {
   os_type             = var.os_type
   identity_type       = var.identity_type
   tags                = var.tags
+}
+
+output "webapp_id" {
+  value = module.webapp.webapp_id
 }
 
 
