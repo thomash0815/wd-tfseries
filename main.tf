@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "webapp-rg" {
 }
 
 module "webapp" {
-  source              = "./modules/webapp"
+  source              = "git::https://github.com/thomash0815/tf-modules.git//webapp" #"./modules/webapp"
   webapp_name         = var.webapp_name
   resource_group_name = azurerm_resource_group.webapp-rg.name
   location            = azurerm_resource_group.webapp-rg.location
