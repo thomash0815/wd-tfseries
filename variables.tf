@@ -10,29 +10,29 @@ variable "location" {
 # app service plan
 variable "appserviceplan_name" {
   description = "Name of the App Service Plan"
-  type = string
+  type        = string
 }
 variable "sku_name" {
   description = "SKU of the App Service Plan"
-  type = string
+  type        = string
 }
 variable "os_type" {
   description = "OS type of the App Service Plan"
-  type = string
-  default = "Linux"
+  type        = string
+  default     = "Linux"
 }
 
 # webapps 
 
 variable "webapp_name" {
   description = "Name of the web app"
-  type = string
+  type        = string
 }
 
 variable "identity_type" {
   description = "Identity type for the Web App"
-  type = string
-  default = "SystemAssigned"
+  type        = string
+  default     = "SystemAssigned"
 }
 
 variable "tags" {
@@ -40,7 +40,7 @@ variable "tags" {
   type        = map(string)
 
   default = {
-    Costcenter     = "1234",
+    Costcenter  = "1234",
     Environment = "dev"
   }
 }
