@@ -29,6 +29,11 @@ variable "webapp_name" {
   type = string
 }
 
+variable "webapp_names_list" {
+  description = "List of names for multiple web apps"
+  type = set(string)
+}
+
 variable "identity_type" {
   description = "Identity type for the Web App"
   type = string
